@@ -40,17 +40,16 @@ class ViewController: UIViewController {
             scroll.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0)
         ])
         
-//        content.frame.size.height = 48
-//        content.backgroundColor = .purple
-//        content.translatesAutoresizingMaskIntoConstraints = false
-//        scroll.addSubview(content)
-//        NSLayoutConstraint.activate([
-//            content.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0),
-//            content.topAnchor.constraint(equalTo: view.topAnchor, constant: 0),
-//            content.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0),
-//            content.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0),
-//            content.widthAnchor.constraint(equalTo: scroll.widthAnchor)
-//        ])
+        content.backgroundColor = .purple
+        content.translatesAutoresizingMaskIntoConstraints = false
+        stackView.addSubview(content)
+        NSLayoutConstraint.activate([
+            content.leftAnchor.constraint(equalTo: stackView.leftAnchor, constant: 0),
+            content.topAnchor.constraint(equalTo: stackView.topAnchor, constant: 0),
+            content.rightAnchor.constraint(equalTo: stackView.rightAnchor, constant: 0),
+            content.bottomAnchor.constraint(equalTo: stackView.bottomAnchor, constant: 0),
+            content.widthAnchor.constraint(equalTo: stackView.widthAnchor)
+        ])
         
         scroll.addSubview(stackView)
         stackView.spacing = 10
